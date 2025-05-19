@@ -250,6 +250,7 @@ MonoBehaviour:
   - {fileID: 3190956509787603648, guid: 0fb69908be1ea754c8662fd1d03f2242, type: 3}
   - {fileID: 4512831256521842616, guid: 15f8b5725c4c5fb4681591b6135a9e6a, type: 3}
   - {fileID: 1924667778663819673, guid: b118ce46ce62f5e4392be21228cc2181, type: 3}
+  scoreText: {fileID: 1508229921}
 --- !u!4 &242598575
 Transform:
   m_ObjectHideFlags: 0
@@ -503,6 +504,7 @@ GameObject:
   - component: {fileID: 1042180089}
   - component: {fileID: 1042180088}
   - component: {fileID: 1042180087}
+  - component: {fileID: 1042180090}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -560,6 +562,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1042180090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042180086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04abdfa1abcd8994cbf8ec6fb52b04d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets: []
+  scoreText: {fileID: 1508229921}
 --- !u!1 &1043111703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,5 +1074,5 @@ SceneRoots:
   - {fileID: 494445612}
   - {fileID: 1611319334}
   - {fileID: 242598575}
-  - {fileID: 531228748}
   - {fileID: 1042180089}
+  - {fileID: 531228748}
