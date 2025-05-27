@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,10 +56,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame()
+    public void StartGame(int difficulty)
     {
         isGameActive = true;
         score = 0;
+        spawnRate /= difficulty;
 
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
