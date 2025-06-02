@@ -56,6 +56,19 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void UpdateLives()
+    {
+        if (isGameActive)
+        {
+
+            livesText.text = "Lives" + lives();
+            if (lives == 0)
+            {
+                GameOver();
+            }
+        }
+    }
+
     public void StartGame(int difficulty)
     {
         isGameActive = true;
@@ -65,5 +78,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnTarget());
         UpdateScore(0);
         titleScreen.gameObject.SetActive(false);
+
+        //Offset -1 in the UpdateLives()
+        lives++;
+        UpdateLives();
+        //
     }
 }
